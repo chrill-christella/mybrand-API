@@ -2,7 +2,7 @@ const express = require("express");
 const {
   deleteMessage,
 } = require("./../src/controllers/userMessages-controller");
-//const messageMiddleware = require("../middlewares/messagevalidation");
+const messageMiddleware = require("../src/middlewares/messagevalidation");
 const {
   createMessage,
   getAllMessages,
@@ -12,9 +12,7 @@ const {
 const router = express.Router();
 
 // Create article
-//router.post("", messageMiddleware, createMessage);
-
-router.post("", createMessage);
+router.post("", messageMiddleware, createMessage);
 
 // Get all articles
 router.get("/", getAllMessages);

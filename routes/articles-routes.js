@@ -17,12 +17,12 @@ const {
   updateArticle,
   deleteArticle,
 } = require("./../src/controllers/article-controller");
-//const blogMiddleware = require("./../middlewares/blogvalidation");
+const blogMiddleware = require("./../src/middlewares/blogvalidation");
 
 const router = express.Router();
 
 // Create article
-router.post("", createArticle);
+router.post("", blogMiddleware , createArticle);
 
 // Get all articles
 router.get("/", getAllArticle);
@@ -31,7 +31,7 @@ router.get("/", getAllArticle);
 router.get("/:id", getArticle);
 
 // Update article by id
-router.patch("/:id", updateArticle);
+router.patch("/:id", blogMiddleware,  updateArticle);
 
 // Delete article by id
 router.delete("/:id", deleteArticle);
