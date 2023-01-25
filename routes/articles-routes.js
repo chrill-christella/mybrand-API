@@ -7,7 +7,7 @@ import {
   deleteArticle,
 } from "./../src/controllers/article-controller";
 import blogMiddleware from "./../src/middlewares/blogvalidation";
-import authGuard from "./../src/middlewares/authGuard";
+//import authGuard from "./../src/middlewares/authGuard";
 
 // const express = require("express");
 // const {
@@ -23,7 +23,7 @@ import authGuard from "./../src/middlewares/authGuard";
 const router = express.Router();
 
 // Create article
-router.post("", authGuard, blogMiddleware, createArticle);
+router.post("", blogMiddleware, createArticle);
 
 // Get all articles
 router.get("/", getAllArticle);
@@ -32,9 +32,9 @@ router.get("/", getAllArticle);
 router.get("/:id", getArticle);
 
 // Update article by id
-router.patch("/:id", authGuard, blogMiddleware, updateArticle);
+router.patch("/:id", blogMiddleware, updateArticle);
 
 // Delete article by id
-router.delete("/:id", authGuard, deleteArticle);
+router.delete("/:id", deleteArticle);
 
 export default router;

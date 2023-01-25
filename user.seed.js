@@ -16,7 +16,7 @@ const connectDB = async () => {
     const users = [
       {
         username: "Admin",
-        email: "admin@gmail.com",
+        email: "ad@gmail.com",
         password: await hashContent("Passcode@1"),
       },
     ];
