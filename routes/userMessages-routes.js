@@ -1,13 +1,11 @@
-const express = require("express");
-const {
-  deleteMessage,
-} = require("./../src/controllers/userMessages-controller");
-const messageMiddleware = require("../src/middlewares/messagevalidation");
-const {
+import express from "express";
+import { deleteMessage } from "./../src/controllers/userMessages-controller";
+import messageMiddleware from "../src/middlewares/messagevalidation";
+import {
   createMessage,
   getAllMessages,
   getMessages,
-} = require("./../src/controllers/userMessages-controller");
+} from "./../src/controllers/userMessages-controller";
 
 const router = express.Router();
 
@@ -23,5 +21,5 @@ router.get("/:id", getMessages);
 //Delete article by id
 router.delete("/:id", deleteMessage);
 
-//export default router;
-module.exports = router;
+export default router;
+//module.exports = router;

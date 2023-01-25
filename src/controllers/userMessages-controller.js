@@ -1,4 +1,4 @@
-const Message = require("./../models/userMessages-model");
+import Message from "./../models/userMessages-model";
 
 async function createMessage(req, res, next) {
   try {
@@ -54,4 +54,4 @@ async function deleteMessage(req, res, next) {
   }
 }
 
-module.exports = { createMessage, getAllMessages, getMessages, deleteMessage };
+export { createMessage, getAllMessages, getMessages, deleteMessage };

@@ -1,11 +1,12 @@
-// import Comment from '../models/comments-model.js'
+import Comment from "./../models/comments-models";
 
-const Comment = require("../models/comments-model.js");
+//const Comment = require("../models/comments-models");
 
 async function getComments(req, res, next) {
   try {
     const comments = await Comment.find({ commentID: req.params.id });
     res.status(200).send(comments);
+    data: comments;
   } catch (error) {
     console.log(error);
     res.status(500).json({ status: 500, message: "Internal server error" });
@@ -22,7 +23,4 @@ const postComment = async (req, res) => {
   }
 };
 
-module.exports = {
-  getComments,
-  postComment,
-};
+export { getComments, postComment };

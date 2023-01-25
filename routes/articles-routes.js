@@ -1,28 +1,28 @@
-// import express from "express";
-
-// import {
-//   createArticle,
-//   getAllArticle,
-//   getArticle,
-//   updateArticle,
-//   deleteArticle,
-// } from "./../controllers/article-controller";
-// import blogMiddleware from "./../middlewares/blogvalidation";
-
-const express = require("express");
-const {
+import express from "express";
+import {
   createArticle,
   getAllArticle,
   getArticle,
   updateArticle,
   deleteArticle,
-} = require("./../src/controllers/article-controller");
-const blogMiddleware = require("./../src/middlewares/blogvalidation");
+} from "./../src/controllers/article-controller";
+import blogMiddleware from "./../src/middlewares/blogvalidation";
+
+// const express = require("express");
+// const {
+//   createArticle,
+//   getAllArticle,
+//   getArticle,
+//   updateArticle,
+//   deleteArticle,
+// } = require("./../src/controllers/article-controller");
+// const blogMiddleware = require("./../src/middlewares/blogvalidation");
+// const auth = require("./../src/middlewares/verifyAdmin");
 
 const router = express.Router();
 
 // Create article
-router.post("", blogMiddleware , createArticle);
+router.post("", blogMiddleware, createArticle);
 
 // Get all articles
 router.get("/", getAllArticle);
@@ -31,9 +31,9 @@ router.get("/", getAllArticle);
 router.get("/:id", getArticle);
 
 // Update article by id
-router.patch("/:id", blogMiddleware,  updateArticle);
+router.patch("/:id", blogMiddleware, updateArticle);
 
 // Delete article by id
 router.delete("/:id", deleteArticle);
 
-module.exports = router;
+export default router;

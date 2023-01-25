@@ -1,6 +1,6 @@
-//import Article from "../models/articles-model";
+import Article from "../models/articles-model";
 
-const Article = require("./../models/articles-model");
+//const Article = require("./../models/articles-model");
 
 async function createArticle(req, res, next) {
   try {
@@ -21,7 +21,7 @@ async function getArticle(req, res, next) {
     const article = await Article.findById({ _id: req.params.id });
     res.status(200).json({
       status: 200,
-      message: "Article created successfully",
+      message: "Article retrieved successfully",
       data: article,
     });
   } catch (error) {
@@ -67,7 +67,7 @@ async function deleteArticle(req, res, next) {
     res.status(400).json({ error: err.message });
   }
 }
-module.exports = {
+export {
   createArticle,
   getAllArticle,
   getArticle,

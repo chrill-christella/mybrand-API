@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-  articleID: {
-    type: String,
-    required: [true, "the comment must be referenced to the article"],
-  },
-
   comment: {
     type: String,
     required: [true, "there must be the comment content"],
