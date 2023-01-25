@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { hashContent } from "../utils/bcrypt.util";
-import User from "./../models/user.model";
+import { hashContent } from "./src/utils/bcrypt.util";
+import User from "./src/models/user-model";
 require("dotenv").config();
 
 const connectDB = async () => {
@@ -15,9 +15,9 @@ const connectDB = async () => {
     );
     const users = [
       {
-        username: "ADMIN",
+        username: "Admin",
         email: "admin@gmail.com",
-        password: await hashContent("Password@123"),
+        password: await hashContent("Passcode@1"),
       },
     ];
     for (const user of users) {
@@ -29,7 +29,7 @@ const connectDB = async () => {
     mongoose.connection.close();
   } catch (error) {
     console.log(error);
-    console.log("Having problems connection to the DATABASE");
+    console.log("Having problems connecting to the DATABASE");
   }
 };
 

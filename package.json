@@ -4,24 +4,29 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
-    "dev": "nodemon --exec babel-node app.js",
-    "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js"
+    "start": "nodemon --exec babel-node seed app.js",
+    "dev": "nodemon --exec babel-node user.seed.js app.js",
+    "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js",
+    "seed": "nodemon --exec babel-node seed.js"
   },
   "keywords": [],
   "author": "Christella",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "del-cli": "^5.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "http": "^0.0.1-security",
+    "http-status-codes": "^2.2.0",
     "joi": "^17.7.0",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^6.8.3"
+    "mongoose": "^6.8.3",
+    "passport-http-bearer": "^1.0.1",
+    "status-codes": "^0.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
@@ -31,6 +36,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
     "@babel/runtime": "^7.20.13",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^9.1.2",
     "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.3.7",

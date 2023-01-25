@@ -3,6 +3,7 @@ import routes from "./routes";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+const Strategy = require("passport-http-bearer").Strategy;
 dotenv.config();
 
 // const express = require("express");
