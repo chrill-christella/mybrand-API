@@ -1,6 +1,6 @@
-//import Article from "../models/articles-model";
+import Article from "../models/articles-model";
 
-const Article = require("./../models/articles-model");
+//const Article = require("./../models/articles-model");
 
 async function createArticle(req, res, next) {
   try {
@@ -67,7 +67,7 @@ async function deleteArticle(req, res, next) {
     res.status(400).json({ error: err.message });
   }
 }
-module.exports = {
+export {
   createArticle,
   getAllArticle,
   getArticle,

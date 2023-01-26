@@ -1,22 +1,22 @@
-// import express from "express";
+import express from "express";
 
-// import {
-//   createArticle,
-//   getAllArticle,
-//   getArticle,
-//   updateArticle,
-//   deleteArticle,
-// } from "./../controllers/article-controller";
-// import blogMiddleware from "./../middlewares/blogvalidation";
-
-const express = require("express");
-const {
+import {
   createArticle,
   getAllArticle,
   getArticle,
   updateArticle,
   deleteArticle,
-} = require("./../src/controllers/article-controller");
+} from "./../src/controllers/article-controller";
+// import blogMiddleware from "./../middlewares/blogvalidation";
+
+// const express = require("express");
+// const {
+//   createArticle,
+//   getAllArticle,
+//   getArticle,
+//   updateArticle,
+//   deleteArticle,
+// } = require("./../src/controllers/article-controller");
 //const blogMiddleware = require("./../middlewares/blogvalidation");
 
 const router = express.Router();
@@ -36,4 +36,4 @@ router.patch("/:id", updateArticle);
 // Delete article by id
 router.delete("/:id", deleteArticle);
 
-module.exports = router;
+export default router;
