@@ -60,7 +60,7 @@ const createArticle = {
   description: "create a new article",
   security: [
     {
-      auth_token: [],
+      token: [],
     },
   ],
   requestBody: {
@@ -74,21 +74,16 @@ const createArticle = {
               description: "title of the blog",
               example: "Learning",
             },
-            description: {
-              type: "string",
-              description: "description of the blog",
-              example: "singing is the best practice",
-            },
-            image: {
+            picture: {
               type: "string",
               description: "image of the blog",
               example:
                 "/Users/Desktop/My Projects/server/src/images/1673612829382brand.PNG",
             },
-            blogBody: {
+            description: {
               type: "string",
-              description: "body of the blog",
-              example: "eating is good",
+              description: "description of the blog",
+              example: "singing is the best practice",
             },
           },
         },
@@ -105,12 +100,10 @@ const createArticle = {
             example: {
               _id: "63ccde6635bde581af696708",
               title: "dancing",
+              picture:
+                "http://localhost:3001/images/1674370662518pexels-harry-dona-2338407.jpg",
               description:
                 "dancing is a very good physical exercise for the dancer",
-              image:
-                "http://localhost:3001/images/1674370662518pexels-harry-dona-2338407.jpg",
-              blogBody:
-                "dancing makes most of the dancer feel good\ndancing makes most of the dancer feel gooddancing makes most of the dancer feel good\ndancing makes most of the dancer feel gooddancing makes most of the dancer feel good",
             },
           },
         },
@@ -125,7 +118,7 @@ const updateArticle = {
   description: "Update an article",
   security: [
     {
-      auth_token: [],
+      token: [],
     },
   ],
   parameters: [
@@ -148,20 +141,16 @@ const updateArticle = {
               description: "Title of the blog",
               example: "Singing",
             },
-            description: {
-              type: "string",
-              description: "Description of the blog",
-              example: "Singing is the best practice",
-            },
-            image: {
+            picture: {
               type: "string",
               description: "Image of the blog (url)",
               example:
                 "http://localhost:5000/images/1674370662518pexels-harry-dona-2338407.jpg",
             },
-            blogBody: {
+            description: {
               type: "string",
-              description: "Body of the blog",
+              description: "Description of the blog",
+              example: "Singing is the best practice",
             },
           },
         },
@@ -184,13 +173,13 @@ const updateArticle = {
                 type: "string",
                 description: "Title of the updated artcle",
               },
+              picture: {
+                type: "string",
+                description: "Image of the updated article (url)",
+              },
               description: {
                 type: "string",
                 description: "Description of the updated article",
-              },
-              image: {
-                type: "string",
-                description: "Image of the updated article (url)",
               },
             },
           },

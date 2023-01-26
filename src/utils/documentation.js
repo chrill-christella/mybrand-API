@@ -17,6 +17,7 @@ const swaggerDocumentations = {
     },
   ],
 
+  schemes: ["HTTP", "HTTPS"],
   tags: [
     {
       name: "Articles",
@@ -33,6 +34,16 @@ const swaggerDocumentations = {
       description: "",
     },
   ],
+
+  components: {
+    securitySchemes: {
+      token: {
+        type: "http",
+        scheme: "bearer",
+        bearerFormat: "JWT",
+      },
+    },
+  },
 
   paths: {
     ...articleRouteDoc,

@@ -1,22 +1,21 @@
-//logging in a user swagger documentation
-const login = {
+const createUser = {
   tags: ["User"],
   description: "login user",
   requestBody: {
     content: {
-      "Application/json": {
+      "application/json": {
         schema: {
           type: "object",
           properties: {
             email: {
-              type: "email",
-              description: "email of the user",
-              example: "lavender@gmail.com",
+              type: "string",
+              description: "User email",
+              example: "admin@gmail.com",
             },
             password: {
               type: "string",
-              description: "password of the user",
-              example: "12345678",
+              description: "Password",
+              example: "1234",
             },
           },
         },
@@ -30,6 +29,11 @@ const login = {
         "application/json": {
           schema: {
             type: "object",
+            example: {
+              status: 0,
+              message: "",
+              payload: [],
+            },
           },
         },
       },
@@ -39,7 +43,7 @@ const login = {
 
 const userRouteDoc = {
   "/api/user/signin": {
-    post: login,
+    post: createUser,
   },
 };
 
