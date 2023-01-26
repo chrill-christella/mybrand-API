@@ -38,7 +38,7 @@ const login = {
 };
 
 const userRouteDoc = {
-  "/api/signin": {
+  "/api/user/signin": {
     post: login,
   },
 };
