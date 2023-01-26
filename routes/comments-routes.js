@@ -6,6 +6,6 @@ import {
 import commentMiddleware from "../src/middlewares/commentvalidation";
 const router = express.Router();
 router.get("/", getComments);
-router.post("/", commentMiddleware, postComment);
+router.post("", commentMiddleware, postComment);
 
 export default router;
