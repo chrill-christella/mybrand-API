@@ -11,9 +11,9 @@ const listOfAllMessages = {
             type: "object",
             example: {
               _id: "63c5554511120c1b217b1d31",
-              title: "eating is good",
-              picture: "nothing",
-              description: "niceeeeee",
+              name: "Ella",
+              Email: "ella@gmail.com",
+              message: "niceeeeee",
               __v: 0,
             },
           },
@@ -38,6 +38,18 @@ const createmessage = {
         schema: {
           type: "object",
           properties: {
+            name: {
+              type: "string",
+              description: "name",
+              example: "Christella",
+            },
+
+            email: {
+              type: "string",
+              description: "email",
+              example: "email@gmail.com",
+            },
+
             message: {
               type: "string",
               description: "message",
@@ -56,6 +68,8 @@ const createmessage = {
               type: "object",
               example: {
                 _id: "63ccde6635bde581af696708",
+                name: "Ella",
+                Email: "ella@gmail.com",
                 message: "dancing",
               },
             },
