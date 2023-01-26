@@ -1,7 +1,7 @@
 //get all blogs swagger documentation
 const listOfAllComments = {
   tags: ["Comments"],
-  description: "list of all articles",
+  description: "list of all comments",
   responses: {
     200: {
       description: "OK",

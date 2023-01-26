@@ -1,7 +1,7 @@
 //get all messages swagger documentation
 const listOfAllMessages = {
   tags: ["Messages"],
-  description: "list of all articles",
+  description: "list of all Messages",
   responses: {
     200: {
       description: "OK",
@@ -26,7 +26,7 @@ const listOfAllMessages = {
 
 const createmessage = {
   tags: ["Messages"],
-  description: "create a new article",
+  description: "create a new message",
   security: [
     {
       auth_token: [],
