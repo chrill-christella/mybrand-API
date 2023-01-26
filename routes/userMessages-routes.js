@@ -22,4 +22,4 @@ router.get("/:id", getMessages);
 router.delete("/:id", deleteMessage);
 
 export default router;
-//module.exports = router;
+
