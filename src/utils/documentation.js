@@ -1,5 +1,6 @@
 import articleRouteDoc from "../../routes/article.doc";
 import messageRouteDoc from "../../routes/message.doc";
+import userRouteDoc from "../../routes/user.doc";
 
 const swaggerDocumentations = {
   openapi: "3.0.0",
@@ -25,11 +26,17 @@ const swaggerDocumentations = {
       name: "Messages",
       description: "",
     },
+
+    {
+      name: "User",
+      description: "",
+    },
   ],
 
   paths: {
     ...articleRouteDoc,
     ...messageRouteDoc,
+    ...userRouteDoc,
   },
 };
 
