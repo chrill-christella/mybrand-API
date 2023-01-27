@@ -19,10 +19,10 @@ router.post("", authGuard, blogMiddleware, createArticle);
 router.get("/", getAllArticle);
 
 // Get article by id
-router.get("/:id", getArticle);
+router.get("/getOneArticle/:id", getArticle);
 
 // Update article by id
-router.patch("/:id", authGuard, blogMiddleware, updateArticle);
+router.patch("/update/:id", authGuard, blogMiddleware, updateArticle);
 
 // Delete article by id
 router.delete("/:id", authGuard, deleteArticle);

@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 const Strategy = require("passport-http-bearer").Strategy;
+import swaggerDoc from "swagger-ui-express";
+import swaggerDocumentations from "./src/utils/documentation";
 dotenv.config();
 
 
@@ -20,6 +22,8 @@ mongoose.connect(process.env.DATABASEURL, {
 app.use(bodyParser.json());
 
 app.use("/api", routes);
+app.use("/documentation", swaggerDoc.serve);
+app.use("/documentation", swaggerDoc.setup(swaggerDocumentations));
 
 app.listen(port, () => {
   console.log(`The app is listening on port ${port}`);

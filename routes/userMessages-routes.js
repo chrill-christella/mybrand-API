@@ -16,11 +16,12 @@ router.post("", messageMiddleware, createMessage);
 // Get all messages
 router.get("/", getAllMessages);
 
-// Get message by id
-router.get("/:id", getMessages);
+// Get article by id
+router.get("/getOne/:id", getMessages);
 
-//Delete message by id
-router.delete("/:id", deleteMessage);
+//Delete article by id
+router.delete("/deletemessage/:id", deleteMessage);
+
 
 export default router;
 
