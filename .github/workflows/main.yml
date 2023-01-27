@@ -1,1 +1,27 @@
+name: CI/CD
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18.x]
+    env:
+      MONGODB_URL: ${{secrets.DATABASEURL}}
+      JWT_SECRET: ${{secrets.JWT_SECRETE}}
 
+    steps:
+      - uses: actions/checkout@v1
+      - name: "Use Node.js ${{ matrix.node-version }} on ${{ matrix.os }}"
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm test
