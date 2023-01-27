@@ -5,20 +5,21 @@ import {
   createMessage,
   getAllMessages,
   getMessages,
+
 } from "./../src/controllers/userMessages-controller";
 
 const router = express.Router();
 
-// Create article
+// Create message
 router.post("", messageMiddleware, createMessage);
 
-// Get all articles
+// Get all messages
 router.get("/", getAllMessages);
 
-// Get article by id
+// Get message by id
 router.get("/:id", getMessages);
 
-//Delete article by id
+//Delete message by id
 router.delete("/:id", deleteMessage);
 
 export default router;

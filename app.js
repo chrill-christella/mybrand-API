@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 const Strategy = require("passport-http-bearer").Strategy;
 dotenv.config();
 
+
 const app = express();
 
 const port = 3001;
