@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": " babel-node  app.js",
-    "dev": "nodemon --exec babel-node  app.js",
-    "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js",
+    "dev": "nodemon --exec babel-node app.js",
+    "test": "mocha --recursive --exit  --require @babel/register src/testing/**/*.js",
     "seed": "nodemon --exec babel-node user.seed.js"
   },
   "keywords": [],

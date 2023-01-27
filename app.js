@@ -8,13 +8,12 @@ import swaggerDoc from "swagger-ui-express";
 import swaggerDocumentations from "./src/utils/documentation";
 dotenv.config();
 
-
 const app = express();
 
 const port = 3001;
 
 mongoose.set("strictQuery", true);
-mongoose.connect(process.env.DATABASEURL, {
+mongoose.connect(process.env.DATABASEURL_TEST, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
