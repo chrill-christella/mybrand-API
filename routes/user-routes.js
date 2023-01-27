@@ -1,9 +1,10 @@
 import express from "express";
-const { signup, login } = require("./../src/controllers/user-controller");
+import { signin } from "./../src/controllers/user-controller";
+import { loginValidation } from "./../src/Validation/login/login.validation";
+
 
 const router = express.Router();
 
-router.post("/signup", signup);
-router.get("/login", login);
+router.post("/signin", loginValidation, signin);
 
 export default router;

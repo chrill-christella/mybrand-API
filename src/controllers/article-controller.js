@@ -21,7 +21,7 @@ async function getArticle(req, res, next) {
     const article = await Article.findById({ _id: req.params.id });
     res.status(200).json({
       status: 200,
-      message: "Article created successfully",
+      message: "Article retrieved successfully",
       data: article,
     });
   } catch (error) {

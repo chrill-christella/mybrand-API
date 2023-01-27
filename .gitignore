@@ -130,3 +130,12 @@ dist
 .pnp.*
 
 
+
+
+ // "scripts": {
+  //   "start:prod": "node dist/app.js",
+  //   "dev": "nodemon --exec babel-node app.js",
+  //   "start:test": "node app.js",
+  //   "start": "nodemon app.js --exec babel-node -e js",
+  //   "test": "echo \"Error: no test specified\" && exit 1"
+  // },

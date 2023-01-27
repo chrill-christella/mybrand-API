@@ -1,5 +1,4 @@
 import express from "express";
-
 import {
   createArticle,
   getAllArticle,
@@ -7,22 +6,14 @@ import {
   updateArticle,
   deleteArticle,
 } from "./../src/controllers/article-controller";
-// import blogMiddleware from "./../middlewares/blogvalidation";
+import blogMiddleware from "./../src/middlewares/blogvalidation";
+import { authGuard } from "./../src/middlewares/authGuard";
 
-// const express = require("express");
-// const {
-//   createArticle,
-//   getAllArticle,
-//   getArticle,
-//   updateArticle,
-//   deleteArticle,
-// } = require("./../src/controllers/article-controller");
-//const blogMiddleware = require("./../middlewares/blogvalidation");
 
 const router = express.Router();
 
 // Create article
-router.post("", createArticle);
+router.post("", authGuard, blogMiddleware, createArticle);
 
 // Get all articles
 router.get("/", getAllArticle);
@@ -31,9 +22,9 @@ router.get("/", getAllArticle);
 router.get("/:id", getArticle);
 
 // Update article by id
-router.patch("/:id", updateArticle);
+router.patch("/:id", authGuard, blogMiddleware, updateArticle);
 
 // Delete article by id
-router.delete("/:id", deleteArticle);
+router.delete("/:id", authGuard, deleteArticle);
 
 export default router;
