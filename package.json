@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node  app.js",
+    "start": " babel-node  app.js",
     "dev": "nodemon --exec babel-node  app.js",
     "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js",
     "seed": "nodemon --exec babel-node user.seed.js"
@@ -13,6 +13,14 @@
   "author": "Christella",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.18.9",
+    "@babel/runtime": "^7.20.13",
+    "babel-loader": "^9.1.2",
+    "babel-plugin-istanbul": "^6.1.1",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
@@ -32,16 +40,8 @@
     "swagger-ui-express": "^4.6.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
-    "@babel/node": "^7.20.7",
     "@babel/plugin-transform-runtime": "^7.19.6",
-    "@babel/preset-env": "^7.20.2",
-    "@babel/register": "^7.18.9",
-    "@babel/runtime": "^7.20.13",
     "babel-cli": "^6.26.0",
-    "babel-loader": "^9.1.2",
-    "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.3.7",
     "chai-http": "^4.3.0",
     "eslint": "^8.32.0",
