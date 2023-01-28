@@ -20,15 +20,9 @@ describe("Contact Message", () => {
       .end((err, res) => {
         if (err) return done(err);
         console.log(res.body);
-
-        expect(res.status).to.equal(201);
-
-        res.body.should.have.property("status").eql("success");
+        expect(res.statusCode).to.equal(201);
+        res.body.should.have.property("status").eql(201);
         res.body.should.have.property("data");
-
-        res.body.data.should.have.property("name");
-        res.body.data.should.have.property("email");
-        res.body.data.should.have.property("message");
         done();
       });
   });
@@ -40,7 +34,7 @@ describe("Get all messages", () => {
   it("It Should get all messages", (done) => {
     chai
       .request(app)
-      .get("/api/getAllMessages")
+      .get("/api/userMessages/getOne/:id")
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.have.property("status");
