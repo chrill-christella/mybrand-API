@@ -16,8 +16,8 @@ const connectDB = async () => {
     const users = [
       {
         username: "Admin",
-        email: "ad@gmail.com",
-        password: await hashContent("Passcode@1"),
+        email: "admin@gmail.com",
+        password: await hashContent("Password@123"),
       },
     ];
     for (const user of users) {
@@ -29,7 +29,7 @@ const connectDB = async () => {
     mongoose.connection.close();
   } catch (error) {
     console.log(error);
-    console.log("Having problems connecting to the DATABASE");
+    console.log("Having problems connection to the DATABASE");
   }
 };
 
