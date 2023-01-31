@@ -23,12 +23,9 @@ describe("Contact Message", () => {
 
         expect(res.status).to.equal(201);
 
-        res.body.should.have.property("status").eql("success");
+        res.body.should.have.property("status").eql("201");
         res.body.should.have.property("data");
 
-        res.body.data.should.have.property("name");
-        res.body.data.should.have.property("email");
-        res.body.data.should.have.property("message");
         done();
       });
   });

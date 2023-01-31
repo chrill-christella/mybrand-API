@@ -13,6 +13,10 @@ const swaggerDocumentations = {
   servers: [
     {
       url: "https://website-api-o6er.onrender.com",
+      name: "production server",
+    },
+    {
+      url: "https://localhost:3001",
       name: "development server",
     },
   ],
