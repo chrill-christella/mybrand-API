@@ -44,3 +44,22 @@ describe("Get all messages", () => {
       });
   });
 });
+
+//get single message
+
+describe("get single message by id", () => {
+  it("It should get a single message by id", (done) => {
+    const id = " ";
+    chai
+      .request(app)
+      .get(`/api/userMessages/getOne/${id}`)
+      //.set("auth_token", `${token}`)
+      .end((err, res) => {
+        if (err) return done(err);
+        expect(res.status).to.equal(200);
+        expect(res.body).to.have.property("status");
+        expect(res.body).to.have.property("data");
+        done();
+      });
+  });
+});

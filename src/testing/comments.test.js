@@ -11,9 +11,9 @@ describe("comments", () => {
   it("should create  comments", (done) => {
     chai
       .request(app)
-      .post("/api/comment/")
+      .post("/api/comment")
       .send({
-        Comment: "hi and how are you? I am fine and you?",
+        comment: "hi and how are you? I am fine and you?",
       })
       .end((err, res) => {
         if (err) return done(err);
@@ -26,19 +26,19 @@ describe("comments", () => {
   });
 });
 
-// //get all comments
+//get all comments
 
-// describe("Get all comments", () => {
-//   it("It Should get all comments", (done) => {
-//     chai
-//       .request(app)
-//       .get("/api/comment")
-//       .end((err, res) => {
-//         res.should.have.status(200);
-//         res.body.should.have.property("status");
-//         res.body.should.have.property("data");
+describe("Get all comments", () => {
+  it("It Should get all comments", (done) => {
+    chai
+      .request(app)
+      .get("/api/comment")
+      .end((err, res) => {
+        res.should.have.status(200);
+        res.body.should.have.property("status");
+        res.body.should.have.property("data");
 
-//         done();
-//       });
-//   });
-// });
+        done();
+      });
+  });
+});

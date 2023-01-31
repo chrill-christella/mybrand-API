@@ -9,14 +9,14 @@ const connectDB = async () => {
     await mongoose.set("debug", true);
     await mongoose.connect(
       process.env.NODE_ENV === "test"
-        ? process.env.DATABASEURL_TEST
-        : process.env.DATABASEURL,
+        ? process.env.DATABASEURL
+        : process.env.DATABASEURL_TEST,
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
     const users = [
       {
-        username: "Admin",
-        email: "ad@gmail.com",
+        username: "Christella",
+        email: "chris@gmail.com",
         password: await hashContent("Passcode@1"),
       },
     ];

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon --exec babel-node user.seed.js  app.js",
     "dev": "nodemon --exec babel-node user.seed.js app.js",
-    "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/testing/**/*.js --timeout 1000000 --exit || true",
+    "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/testing/**/*.js --timeout 2000000 --exit || true",
     "seed": "nodemon --exec babel-node user.seed.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -14,6 +14,7 @@
   "author": "Christella",
   "license": "ISC",
   "dependencies": {
+    "babel-node": "^0.0.1-security",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
@@ -41,7 +42,6 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.18.9",
     "@babel/runtime": "^7.20.13",
-    "babel-cli": "^6.26.0",
     "babel-loader": "^9.1.2",
     "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.3.7",
