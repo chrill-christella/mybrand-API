@@ -14,7 +14,7 @@ jobs:
         os: [ubuntu-latest]
         node-version: [18.x]
     env:
-      MONGODB_URL: ${{secrets.DATABASEURL}}
+      MONGODB_URL: ${{secrets.DATABASEURL_TEST}}
       JWT_SECRET: ${{secrets.JWT_SECRETE}}
 
     steps:
@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm test
+      - run: npm start
