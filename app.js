@@ -27,3 +27,5 @@ app.use("/documentation", swaggerDoc.setup(swaggerDocumentations));
 app.listen(port, () => {
   console.log(`The app is listening on port ${port}`);
 });
+
+export default app;
