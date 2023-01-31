@@ -6,7 +6,7 @@
 
 ## Description
 
-this is the API that helps to connect to on database
+a REST-API for my brand(personal website)
 
 ### API ENDPOINTS
 
@@ -63,7 +63,6 @@ To run this project, you will need to add the following environment variables to
 ### Tested With
 
 - [Mocha](https://mocha.io/)
-- [Supertest](https://www.npmjs.com/package/supertest)
 
 ### Deployed
 
@@ -71,4 +70,4 @@ To run this project, you will need to add the following environment variables to
 
 ## Author
 
-- [Christella UFITEYEZU]
+- [Christella UFITEYEZU](https://github.com//)
