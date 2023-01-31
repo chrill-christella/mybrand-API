@@ -34,7 +34,7 @@ describe("Get all messages", () => {
   it("It Should get all messages", (done) => {
     chai
       .request(app)
-      .get("/api/userMessages/getOne/:id")
+      .get("/api/userMessages/")
       .end((err, res) => {
         res.should.have.status(200);
         res.body.should.have.property("status");

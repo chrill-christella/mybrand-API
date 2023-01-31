@@ -25,6 +25,7 @@ const connectDB = async () => {
       if (!adminExist) {
         await User.create(user);
       }
+      console.log(adminExist);
     }
     mongoose.connection.close();
   } catch (error) {
