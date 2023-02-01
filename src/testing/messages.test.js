@@ -49,7 +49,7 @@ describe("Get all messages", () => {
 
 describe("get single message by id", () => {
   it("It should get a single message by id", (done) => {
-    const id = " ";
+    const id = "63d3e9c8d2080d1306365659 ";
     chai
       .request(app)
       .get(`/api/userMessages/getOne/${id}`)

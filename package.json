@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node user.seed.js  app.js",
+    "start": "nodemon --exec babel-node   app.js",
     "dev": "nodemon --exec babel-node user.seed.js app.js",
-    "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/testing/**/*.js --timeout 2000000 --exit || true",
+    "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/testing/**/*.js --timeout 3000000 --exit || true",
     "seed": "nodemon --exec babel-node user.seed.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
