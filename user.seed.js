@@ -9,15 +9,15 @@ const connectDB = async () => {
     await mongoose.set("debug", true);
     await mongoose.connect(
       process.env.NODE_ENV === "test"
-        ? process.env.DATABASEURL
-        : process.env.DATABASEURL_TEST,
+        ? process.env.DATABASEURL_TEST
+        : process.env.DATABASEURL,
       { useNewUrlParser: true, useUnifiedTopology: true }
     );
     const users = [
       {
         username: "Admin",
         email: "admin@gmail.com",
-        password: await hashContent("Password@123"),
+        password: await hashContent("Passcode@1"),
       },
     ];
     for (const user of users) {
