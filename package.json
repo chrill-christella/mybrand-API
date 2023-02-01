@@ -5,10 +5,10 @@
   "main": "app.js",
   "scripts": {
     "build": "del-cli --force dist && babel ./src/ -d dist",
-    "start": " babel-node  app.js",
+    "start": " babel-node app.js && user.seed.js",
     "dev": "nodemon --exec babel-node user.seed.js app.js",
     "test": "mocha --recursive --exit  --require @babel/register src/testing/**/*.js",
-    "seed": " babel-node ./user.seed.js"
+    "seed": " babel-node user.seed.js"
   },
   "keywords": [],
   "author": "Christella",
