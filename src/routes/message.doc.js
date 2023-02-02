@@ -2,6 +2,11 @@
 const listOfAllMessages = {
   tags: ["Messages"],
   description: "list of all Messages",
+  security: [
+    {
+      auth_token: [],
+    },
+  ],
   responses: {
     200: {
       description: "OK",
@@ -27,11 +32,7 @@ const listOfAllMessages = {
 const createmessage = {
   tags: ["Messages"],
   description: "create a new message",
-  security: [
-    {
-      auth_token: [],
-    },
-  ],
+
   requestBody: {
     content: {
       "Application/json": {
@@ -85,6 +86,11 @@ const getonemessage = {
   tags: ["Messages"],
   summary: "get user by path id",
   description: "get single message by id",
+  security: [
+    {
+      auth_token: [],
+    },
+  ],
   parameters: [
     {
       name: "id",

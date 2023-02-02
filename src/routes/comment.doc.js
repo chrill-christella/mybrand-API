@@ -25,11 +25,11 @@ const listOfAllComments = {
 const createComment = {
   tags: ["Comments"],
   description: "create a new comment",
-  security: [
-    {
-      auth_token: [],
-    },
-  ],
+  // security: [
+  //   {
+  //     auth_token: [],
+  //   },
+  // ],
   requestBody: {
     content: {
       "Application/json": {

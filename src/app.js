@@ -1,11 +1,11 @@
 import express from "express";
-import routes from "./routes";
+import routes from "./../src/routes";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
 const Strategy = require("passport-http-bearer").Strategy;
 import swaggerDoc from "swagger-ui-express";
-import swaggerDocumentations from "./src/utils/documentation";
+import swaggerDocumentations from "./utils/documentation";
 dotenv.config();
 
 // const express = require("express");
