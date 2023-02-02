@@ -1,9 +1,6 @@
 import express from "express";
-import {
-  getComments,
-  postComment,
-} from "../src/controllers/comments-controller";
-import commentMiddleware from "../src/middlewares/commentvalidation";
+import { getComments, postComment } from "../controllers/comments-controller";
+import commentMiddleware from "../middlewares/commentvalidation";
 const router = express.Router();
 router.get("/", getComments);
 router.post("/", commentMiddleware, postComment);

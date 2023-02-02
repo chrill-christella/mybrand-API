@@ -1,4 +1,4 @@
-import express from "express";
+const express = require("express");
 import welcome from "./welcome-routes";
 import article from "./articles-routes";
 import userMessages from "./userMessages-routes";

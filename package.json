@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "del-cli --force dist && babel ./src/ -d dist",
+    "build": "del-cli --force dist && babel src -d dist",
     "start": "npm run seed && node ./dist/app.js",
-    "dev": "nodemon --exec babel-node user.seed.js app.js",
+    "dev": "nodemon --exec babel-node src/app.js && src/seeds/user.seed.js",
     "test": "nyc mocha --recursive --exit  --require @babel/register test/**/*.js",
     "seed": "npm run build && node ./dist/seeds/user.seed.js"
   },
