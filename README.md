@@ -28,12 +28,12 @@ a REST-API for my brand(personal website)
 
 #### Message
 
-| HTTP Request | Endpoint          | Description                       |
-| :----------- | :---------------- | :-------------------------------- |
-| `GET`        | `/api/message`    | Used to get all the messages sent |
-| `POST`       | `/api/message`    | Used to send message              |
-| `GET`        | `/api/message/id` | Used to get a single blog         |
-| `DELETE`     | `/api/message/id` | Used to delete a message          |
+| HTTP Request | Endpoint                      | Description                       |
+| :----------- | :---------------------------- | :-------------------------------- |
+| `GET`        | `/api/userMessages`           | Used to get all the messages sent |
+| `POST`       | `/api/userMessages/`          | Used to send message              |
+| `GET`        | `/api/userMessages/getOne/id` | Used to get a single blog         |
+| `DELETE`     | `/api/userMessages/id`        | Used to delete a message          |
 
 ## Environment Variables
 

@@ -5,10 +5,9 @@ import {
   getArticle,
   updateArticle,
   deleteArticle,
-} from "./../src/controllers/article-controller";
-import blogMiddleware from "./../src/middlewares/blogvalidation";
-import { authGuard } from "./../src/middlewares/authGuard";
-
+} from "../controllers/article-controller";
+import blogMiddleware from "../middlewares/blogvalidation";
+import { authGuard } from "../middlewares/authGuard";
 
 const router = express.Router();
 

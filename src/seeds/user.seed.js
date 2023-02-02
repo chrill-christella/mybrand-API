@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { hashContent } from "./src/utils/bcrypt.util";
-import User from "./src/models/user-model";
+import { hashContent } from "../utils/bcrypt.util";
+import User from "../models/user-model";
 require("dotenv").config();
 
 const connectDB = async () => {

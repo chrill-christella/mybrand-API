@@ -33,7 +33,7 @@ const listOfAllMessages = {
 const createmessage = {
   tags: ["Messages"],
   description: "create a new message",
-  
+
   requestBody: {
     content: {
       "Application/json": {

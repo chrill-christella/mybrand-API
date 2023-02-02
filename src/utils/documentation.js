@@ -1,7 +1,7 @@
-import articleRouteDoc from "../../routes/article.doc";
-import commentRouteDoc from "../../routes/comment.doc";
-import messageRouteDoc from "../../routes/message.doc";
-import userRouteDoc from "../../routes/user.doc";
+import articleRouteDoc from "../routes/article.doc";
+import commentRouteDoc from "../routes/comment.doc";
+import messageRouteDoc from "../routes/message.doc";
+import userRouteDoc from "../routes/user.doc";
 
 const swaggerDocumentations = {
   openapi: "3.0.0",

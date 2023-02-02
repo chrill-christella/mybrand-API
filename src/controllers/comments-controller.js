@@ -1,4 +1,4 @@
-import Comment from "./../models/comments-models";
+import Comment from "./../../src/models/comments-models";
 
 //const Comment = require("../models/comments-models");
 

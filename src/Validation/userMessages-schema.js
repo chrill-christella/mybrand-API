@@ -1,4 +1,4 @@
-const Joi = require("joi");
+import Joi from "joi";
 
 const messageValidation = Joi.object({
   name: Joi.string().min(5).required(),
@@ -6,4 +6,4 @@ const messageValidation = Joi.object({
   message: Joi.string().min(20).required(),
 });
 
-module.exports = messageValidation;
+export default messageValidation;

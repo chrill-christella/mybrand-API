@@ -1,12 +1,11 @@
 import express from "express";
-import { deleteMessage } from "./../src/controllers/userMessages-controller";
-import messageMiddleware from "../src/middlewares/messagevalidation";
+import { deleteMessage } from "../controllers/userMessages-controller";
+import messageMiddleware from "../middlewares/messagevalidation";
 import {
   createMessage,
   getAllMessages,
   getMessages,
-
-} from "./../src/controllers/userMessages-controller";
+} from "../controllers/userMessages-controller";
 
 const router = express.Router();
 
@@ -22,6 +21,4 @@ router.get("/getOne/:id", getMessages);
 //Delete article by id
 router.delete("/deletemessage/:id", deleteMessage);
 
-
 export default router;
-
