@@ -16,7 +16,7 @@ const swaggerDocumentations = {
       name: "production server",
     },
     {
-      url: "https://localhost:3001",
+      url: "http://localhost:3001",
       name: "development server",
     },
   ],
