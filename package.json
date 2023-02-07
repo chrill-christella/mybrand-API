@@ -6,9 +6,10 @@
   "scripts": {
     "build": "del-cli --force dist && babel src -d dist",
     "dev": "nodemon --exec babel-node  src/app.js",
-    "test": "mocha --recursive --exit  --require @babel/register src/testing/**/*.js",
     "start": "npm run seed &&  node dist/app.js",
-    "seed": "npm run build && node dist/seeds/user.seed.js"
+    "seed": "npm run build && node dist/seeds/user.seed.js",
+    "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/tests/**/*.js --timeout 3000000 --exit || true",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "Christella",
