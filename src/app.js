@@ -13,7 +13,7 @@ const app = express();
 const port = 3001;
 
 mongoose.set("strictQuery", true);
-mongoose.connect(process.env.DATABASEURL_TEST, {
+mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
