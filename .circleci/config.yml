@@ -10,8 +10,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install and Make
-          command: npm install && make test-coverage
+          name: Install packages
+          command: |
+            npm install
       - run:
           name: Test
           command: |
