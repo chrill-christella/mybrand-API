@@ -1,20 +1,32 @@
 version: 2.1
 orbs:
-  node: circleci/node@5.1.0
   coveralls: coveralls/coveralls@1.0.6
-
 jobs:
   build:
     docker:
-      - image: circleci/node:14.17.0
+      - image: circleci/node:15
     steps:
       - checkout
       - run:
-          name: Install packages
-          command: |
-            npm install
+          name: 'INSTALLING DEPENDENCY'
+          command: npm install
+          environment: 
+            DATABASEURL: DATABASEURL
+            DATABASEURL_TEST: DATABASEURL_TEST
+            JWT_SECRETE: JWT_SECRETE
+            CLOUDINARY_URL: CLOUDINARY_URL
       - run:
-          name: Test
-          command: |
-            npm test
-      - coveralls/upload
+          name: 'TESTING'
+          command: npm run test
+      - coveralls/upload 
+      - store_artifacts:
+          path: test-results
+          prefix: tests
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
+      - store_test_results:
+          path: test-results
+notify:
+  webhooks:
+    - url: https://coveralls.io/webhook?repo_token=$%7BCOVERALLS_REPO_TOKEN%7D
