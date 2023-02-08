@@ -73,7 +73,7 @@ it("it should delete a blog", (done) => {
   chai
     .request(app)
     .delete(`/api/article/${id}`)
-    .set("auth_token", `${token}`)
+    .set("token", `${token}`)
     .end((error, res) => {
       console.log(res.body);
       chai.expect(res).to.have.status(200);
@@ -100,7 +100,7 @@ describe("Update Blog", () => {
     chai
       .request(app)
       .put(`/api/updatePost/${blogId}`)
-      .set("auth_token", token)
+      .set("token", token)
       .send(updatedData)
       .end((err, res) => {
         console.log(res.body);
