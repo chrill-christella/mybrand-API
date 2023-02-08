@@ -5,11 +5,13 @@ import { generateAccessToken } from "../utils/jwt.util";
 import { UnAuthorizedHttpError } from "../errors/unAuthorizedHttpError";
 
 export const login = async (req, res, next, loginData) => {
+  console.log(loginData);
   const isUserExisting = await findUserByEmail(loginData.email);
   const isPasswordValid = await compareContent(
     loginData.password,
     isUserExisting?.password ? isUserExisting.password : "noHashFound"
   );
+
   if (!isPasswordValid || !isUserExisting) {
     throw new UnAuthorizedHttpError(
       StatusCodes.UNAUTHORIZED,
@@ -18,7 +20,7 @@ export const login = async (req, res, next, loginData) => {
   }
   return {
     accessToken: await generateAccessToken({
-      emai: isUserExisting.email,
+      email: isUserExisting.email,
       id: isUserExisting._id,
     }),
   };

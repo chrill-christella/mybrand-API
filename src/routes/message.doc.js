@@ -5,7 +5,7 @@ const listOfAllMessages = {
 
   security: [
     {
-      auth_token: [],
+      token: [],
     },
   ],
   responses: {
@@ -90,7 +90,7 @@ const getonemessage = {
 
   security: [
     {
-      auth_token: [],
+      token: [],
     },
   ],
   parameters: [

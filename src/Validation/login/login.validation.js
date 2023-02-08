@@ -1,6 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import { BadRequestHttpError } from "./../../errors/badRequestHttpError";
-import { loginSchema } from "./login.schema";
+import loginSchema from "../login/login.schema";
 
 export const loginValidation = async (req, res, next) => {
   try {

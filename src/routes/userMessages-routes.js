@@ -7,16 +7,18 @@ import {
   getMessages,
 } from "../controllers/userMessages-controller";
 
+import { authGuard } from "../middlewares/authGuard";
+
 const router = express.Router();
 
 // Create message
 router.post("", messageMiddleware, createMessage);
 
 // Get all messages
-router.get("/", getAllMessages);
+router.get("/", authGuard, getAllMessages);
 
 // Get article by id
-router.get("/getOne/:id", getMessages);
+router.get("/getOne/:id", authGuard, getMessages);
 
 //Delete article by id
 router.delete("/deletemessage/:id", deleteMessage);

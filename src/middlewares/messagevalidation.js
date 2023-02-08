@@ -1,4 +1,4 @@
-const messagevalidation = require("./../Validation/userMessages-schema");
+import messagevalidation from "../Validation/userMessages-schema";
 
 async function messageMiddleware(req, res, next) {
   const { error, value } = messagevalidation.validate(req.body, {
@@ -10,5 +10,4 @@ async function messageMiddleware(req, res, next) {
   req.validateData = value;
   next();
 }
-
-module.exports = messageMiddleware;
+export default messageMiddleware;

@@ -1,0 +1,19 @@
+version: 2.1
+orbs:
+  node: circleci/node@5.1.0
+  coveralls: coveralls/coveralls@1.0.6
+
+jobs:
+  build:
+    docker:
+      - image: circleci/node:14.17.0
+    steps:
+      - checkout
+      - run:
+          name: Install and Make
+          command: npm install && make test-coverage
+      - run:
+          name: Test
+          command: |
+            npm test
+      - coveralls/upload

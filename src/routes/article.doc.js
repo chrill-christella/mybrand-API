@@ -193,7 +193,7 @@ const updateArticle = {
 const deleteArticle = {
   tags: ["Articles"],
   description: "Delete an article",
-  security: [{ auth_token: [] }],
+  security: [{ token: [] }],
   parameters: [
     {
       name: "id",
