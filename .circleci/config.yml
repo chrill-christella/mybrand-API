@@ -8,17 +8,17 @@ jobs:
     steps:
       - checkout
       - run:
-          name: 'INSTALLING DEPENDENCY'
+          name: "INSTALLING DEPENDENCY"
           command: npm install
-          environment: 
+          environment:
             DATABASEURL: DATABASEURL
             DATABASEURL_TEST: DATABASEURL_TEST
             JWT_SECRETE: JWT_SECRETE
             CLOUDINARY_URL: CLOUDINARY_URL
       - run:
-          name: 'TESTING'
+          name: "TESTING"
           command: npm run test
-      - coveralls/upload 
+      - coveralls/upload
       - store_artifacts:
           path: test-results
           prefix: tests
