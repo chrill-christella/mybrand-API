@@ -12,7 +12,7 @@ const swaggerDocumentations = {
   },
   servers: [
     {
-      url: "https://website-api-o6er.onrender.com",
+      url: "https://wide-eyed-cowboy-hat-dog.cyclic.app",
       name: "production server",
     },
     {
