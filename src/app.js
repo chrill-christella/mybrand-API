@@ -2,6 +2,7 @@ import express from "express";
 import routes from "./routes";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
+import cors from "cors";
 import dotenv from "dotenv";
 const Strategy = require("passport-http-bearer").Strategy;
 import swaggerDoc from "swagger-ui-express";
@@ -17,6 +18,8 @@ mongoose.connect(process.env.DATABASEURL_TEST, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+app.use(cors({origin:"*"}));
 
 app.use(bodyParser.json());
 

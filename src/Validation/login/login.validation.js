@@ -5,14 +5,15 @@ import loginSchema from "../login/login.schema";
 export const loginValidation = async (req, res, next) => {
   try {
     const values = await loginSchema.validate(req.body);
-    if (values.error) {
-      throw new BadRequestHttpError(
-        StatusCodes.BAD_REQUEST,
-        values.error.details[0].message
-      );
-    } else {
-      next();
-    }
+    // if (values.error) {
+    //   throw new BadRequestHttpError(
+    //     StatusCodes.BAD_REQUEST,
+    //     values.error.details[0].message
+    //   );
+    // } else {
+    //   next();
+    // }
+    next();
   } catch (error) {
     next(error);
   }
