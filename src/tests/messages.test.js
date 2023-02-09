@@ -36,7 +36,7 @@ describe("Get all messages", () => {
       .request(app)
       .get("/api/userMessages/")
       .end((err, res) => {
-       // expect(res.statusCode).to.equal(200);
+        // expect(res.statusCode).to.equal(200);
         // res.should.have.status(200);
         // res.body.should.have.property("status");
         // res.body.should.have.property("data");
@@ -52,7 +52,7 @@ describe("get single message by id", () => {
   it("It should get a single message by id", (done) => {
     const id = "63d3e9c8d2080d1306365659 ";
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNocmlzQGdtYWlsLmNvbSIsImlkIjoiNjNkOTAwM2Q2ZmZmMGM4OTRiNDc3OGVjIiwiaWF0IjoxNjc1OTI4NDI5fQ.Hve17KfhpfpYoQ-8mPmfLx4a8wW40M-nbPB1VQYvXyY";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkQGdtYWlsLmNvbSIsImlkIjoiNjNlNTAwZDlmMDRlZmNhZDc5YmVhOGExIiwiaWF0IjoxNjc1OTUzNTg3fQ.ToOlZRN705jMHHV_b0zGYzC2V6_sd4TEeuGIw6FnkT0";
     chai
       .request(app)
       .get(`/api/userMessages/getOne/${id}`)

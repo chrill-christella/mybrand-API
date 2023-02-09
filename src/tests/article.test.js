@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 describe("create a blog", () => {
   it("should create a new blog post with all fields filled", (done) => {
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNocmlzQGdtYWlsLmNvbSIsImlkIjoiNjNkOTAwM2Q2ZmZmMGM4OTRiNDc3OGVjIiwiaWF0IjoxNjc1OTI4NDI5fQ.Hve17KfhpfpYoQ-8mPmfLx4a8wW40M-nbPB1VQYvXyY";
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkQGdtYWlsLmNvbSIsImlkIjoiNjNlNTAwZDlmMDRlZmNhZDc5YmVhOGExIiwiaWF0IjoxNjc1OTUzNTg3fQ.ToOlZRN705jMHHV_b0zGYzC2V6_sd4TEeuGIw6FnkT0";
     chai
       .request(app)
       .post("/api/article")
@@ -69,7 +69,7 @@ describe("get single blog by id", () => {
 it("it should delete a blog", (done) => {
   const id = "63ce55c3cff4e8d1db71ccb2";
   const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNocmlzQGdtYWlsLmNvbSIsImlkIjoiNjNkOTAwM2Q2ZmZmMGM4OTRiNDc3OGVjIiwiaWF0IjoxNjc1OTI4NDI5fQ.Hve17KfhpfpYoQ-8mPmfLx4a8wW40M-nbPB1VQYvXyY";
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkQGdtYWlsLmNvbSIsImlkIjoiNjNlNTAwZDlmMDRlZmNhZDc5YmVhOGExIiwiaWF0IjoxNjc1OTUzNTg3fQ.ToOlZRN705jMHHV_b0zGYzC2V6_sd4TEeuGIw6FnkT0";
   chai
     .request(app)
     .delete(`/api/article/${id}`)
@@ -89,8 +89,7 @@ describe("Update Blog", () => {
     const image = "http://localhost:5000/images/1673610548664brand.PNG";
 
     const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzc3NTM1MjI3NzExZDE3YWVkMzQxNSIsImlhdCI6MTY3NTA1NzU5MCwiZXhwIjoxNjc1MjMwMzkwfQ.VII3UucDGlL5gBYpf-jK-A8ooGs-3KmQW80jpcM2J2E";
-
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkQGdtYWlsLmNvbSIsImlkIjoiNjNlNTAwZDlmMDRlZmNhZDc5YmVhOGExIiwiaWF0IjoxNjc1OTUzNTg3fQ.ToOlZRN705jMHHV_b0zGYzC2V6_sd4TEeuGIw6FnkT0";
     const updatedData = {
       title: "Updated Blog Title",
       description: "This is an updated blog post",

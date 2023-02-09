@@ -6,7 +6,7 @@ import { UnAuthorizedHttpError } from "../errors/unAuthorizedHttpError";
 
 export const login = async (req, res, next, loginData) => {
   console.log(loginData);
-  const isUserExisting = await User.find({ email: loginData.email });
+  const isUserExisting = await findUserByEmail(loginData.email);
   const isPasswordValid = await compareContent(
     loginData.password,
     isUserExisting?.password ? isUserExisting.password : "noHashFound"
@@ -20,12 +20,12 @@ export const login = async (req, res, next, loginData) => {
   }
   return {
     accessToken: await generateAccessToken({
-      emai: isUserExisting.email,
+      email: isUserExisting.email,
       id: isUserExisting._id,
     }),
   };
 };
 
 export const findUserByEmail = async (email) => {
-  // return await User.findOne({ email: email });
+  return await User.findOne({ email: email });
 };

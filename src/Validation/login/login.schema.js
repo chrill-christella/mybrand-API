@@ -1,7 +1,7 @@
 import joi from "joi";
 
 const loginSchema = joi.object({
-  email: joi.string().required().messages({
+  email: joi.string().required().email().messages({
     "string.base": "Email must be a string",
     "string.required": "Email is a required attribute",
     "string.email": "Email must be a valid email string",

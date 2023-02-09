@@ -7,7 +7,7 @@ const signin = async (req, res, next) => {
     const results = await login(req, res, next, req.body);
     res
       .status(StatusCodes.OK)
-      .json({ status: 200, message: "Success", payload: results });
+      .json({ status: StatusCodes.OK, message: "Success", payload: results });
   } catch (error) {
     next(error);
   }
