@@ -1,5 +1,7 @@
 # Badges
 
+![check-code-coverage](https://img.shields.io/badge/code--coverage-71.44%25-green)
+
 # My Brand Api
 
 ## Description
