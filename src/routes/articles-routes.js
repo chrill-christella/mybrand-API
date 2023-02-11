@@ -1,13 +1,16 @@
 import express from "express";
+import { authGuard } from "../middlewares/authGuard";
 import {
   createArticle,
   getAllArticle,
   getArticle,
   updateArticle,
   deleteArticle,
-} from "../controllers/article-controller";
-import blogMiddleware from "../middlewares/blogvalidation";
-import { authGuard } from "../middlewares/authGuard";
+} from "./../controllers/article-controller";
+import {
+  createArticleValidation,
+  updateArticleValidation,
+} from "../Validation/article/create-article.validation";
 import fileFilter from "../utils/fileFilter";
 import multer from "multer";
 
@@ -20,7 +23,7 @@ router.post(
   "",
   authGuard,
   uploads.single("picture"),
-  blogMiddleware,
+  createArticleValidation,
   createArticle
 );
 
@@ -35,7 +38,7 @@ router.patch(
   "/update/:id",
   authGuard,
   uploads.single("picture"),
-  blogMiddleware,
+  updateArticleValidation,
   updateArticle
 );
 
