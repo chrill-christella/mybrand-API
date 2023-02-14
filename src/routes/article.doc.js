@@ -71,19 +71,13 @@ const createArticle = {
           properties: {
             title: {
               type: "string",
-              description: "title of the blog",
-              example: "Learning",
             },
             picture: {
-              type: "string",
+              type: "file",
               description: "image of the blog",
-              example:
-                "/Users/Desktop/My Projects/server/src/images/1673612829382brand.PNG",
             },
             description: {
               type: "string",
-              description: "description of the blog",
-              example: "singing is the best practice",
             },
           },
         },
@@ -98,12 +92,8 @@ const createArticle = {
           schema: {
             type: "object",
             example: {
-              _id: "63ccde6635bde581af696708",
-              title: "dancing",
-              // picture:
-              //   "http://localhost:3001/images/1674370662518pexels-harry-dona-2338407.jpg",
-              description:
-                "dancing is a very good physical exercise for the dancer",
+              status: "success",
+              data: [],
             },
           },
         },
@@ -142,15 +132,11 @@ const updateArticle = {
               example: "Singing",
             },
             picture: {
-              type: "string",
+              type: "file",
               description: "Image of the blog (url)",
-              // example:
-              //   "http://localhost:5000/images/1674370662518pexels-harry-dona-2338407.jpg",
             },
             description: {
               type: "string",
-              description: "Description of the blog",
-              example: "Singing is the best practice",
             },
           },
         },
