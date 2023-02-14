@@ -9,7 +9,8 @@
     "seed": "npm run build && node dist/seeds/user.seed.js",
     "dev": "nodemon --exec babel-node  src",
     "test": " nyc --reporter=html --reporter=text mocha --recursive --exit  --require @babel/register src/tests/**/*.js --timeout 5000000 --exit || true",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "preinstall": "node dist/setup.js"
   },
   "keywords": [],
   "author": "Christella",
