@@ -73,8 +73,9 @@ const createArticle = {
               type: "string",
             },
             picture: {
-              type: "file",
-              description: "image of the blog",
+              type: "string",
+              format: "binary",
+              description: "Picture",
             },
             description: {
               type: "string",
@@ -132,8 +133,9 @@ const updateArticle = {
               example: "Singing",
             },
             picture: {
-              type: "file",
-              description: "Image of the blog (url)",
+              type: "string",
+              format: "binary",
+              description: "Picture",
             },
             description: {
               type: "string",
