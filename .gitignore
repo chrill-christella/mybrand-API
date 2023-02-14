@@ -139,3 +139,5 @@ dist
   //   "start": "nodemon app.js --exec babel-node -e js",
   //   "test": "echo \"Error: no test specified\" && exit 1"
   // },
+temp_auto_push.bat
+temp_interactive_push.bat

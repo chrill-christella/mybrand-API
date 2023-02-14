@@ -2,7 +2,7 @@
 
 [![CI/CD](https://github.com/chrill-christella/mybrand-API/actions/workflows/main.yml/badge.svg)](https://github.com/chrill-christella/mybrand-API/actions/workflows/main.yml)
 
-![check-code-coverage](https://img.shields.io/badge/code--coverage-72.34%25-green)
+![check-code-coverage](https://img.shields.io/badge/code--coverage-75.64%25-green)
 
 # My Brand Api
 

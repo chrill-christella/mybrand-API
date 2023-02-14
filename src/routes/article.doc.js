@@ -1,3 +1,7 @@
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
 //get all blogs swagger documentation
 const listOfAllArticles = {
   tags: ["Articles"],
@@ -65,12 +69,14 @@ const createArticle = {
   ],
   requestBody: {
     content: {
-      "Application/json": {
+      "multipart/form-data": {
         schema: {
           type: "object",
           properties: {
             title: {
               type: "string",
+              description: "Title of the article",
+              example: "Article Title",
             },
             picture: {
               type: "string",
@@ -79,6 +85,8 @@ const createArticle = {
             },
             description: {
               type: "string",
+              description: "Description of the article",
+              example: "description",
             },
           },
         },
@@ -123,14 +131,14 @@ const updateArticle = {
   ],
   requestBody: {
     content: {
-      "application/json": {
+      "multipart/form-data": {
         schema: {
           type: "object",
           properties: {
             title: {
               type: "string",
-              description: "Title of the blog",
-              example: "Singing",
+              description: "Title of the article",
+              example: "Article Title",
             },
             picture: {
               type: "string",
@@ -139,6 +147,8 @@ const updateArticle = {
             },
             description: {
               type: "string",
+              description: "Description of the article",
+              example: "description",
             },
           },
         },
@@ -224,3 +234,4 @@ const articleRouteDoc = {
 };
 
 export default articleRouteDoc;
+
