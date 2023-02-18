@@ -1,4 +1,3 @@
-
 import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
@@ -14,6 +13,17 @@ const articleSchema = new Schema({
   description: {
     type: String,
     required: [true, "The description field is required."],
+  },
+  comments: {
+    type: Array,
+    default: [],
+  },
+  likes: {
+    type: Number,
+    default: 0,
+  },
+  created_date: {
+    type: Date,
   },
 });
 

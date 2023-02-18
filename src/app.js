@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 const Strategy = require("passport-http-bearer").Strategy;
 import swaggerDoc from "swagger-ui-express";
 import swaggerDocumentations from "./utils/documentation";
+
 dotenv.config();
 
 const app = express();

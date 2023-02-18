@@ -65,25 +65,24 @@ const createArticle = {
   ],
   requestBody: {
     content: {
-      "Application/json": {
+      "multipart/form-data": {
         schema: {
           type: "object",
           properties: {
             title: {
               type: "string",
-              description: "title of the blog",
-              example: "Learning",
+              description: "Title of the article",
+              example: "Article Title",
             },
             picture: {
               type: "string",
-              description: "image of the blog",
-              example:
-                "/Users/Desktop/My Projects/server/src/images/1673612829382brand.PNG",
+              format: "binary",
+              description: "Picture",
             },
             description: {
               type: "string",
-              description: "description of the blog",
-              example: "singing is the best practice",
+              description: "Description of the article",
+              example: "description",
             },
           },
         },
@@ -98,12 +97,8 @@ const createArticle = {
           schema: {
             type: "object",
             example: {
-              _id: "63ccde6635bde581af696708",
-              title: "dancing",
-              picture:
-                "http://localhost:3001/images/1674370662518pexels-harry-dona-2338407.jpg",
-              description:
-                "dancing is a very good physical exercise for the dancer",
+              status: "success",
+              data: [],
             },
           },
         },
@@ -132,25 +127,24 @@ const updateArticle = {
   ],
   requestBody: {
     content: {
-      "application/json": {
+      "multipart/form-data": {
         schema: {
           type: "object",
           properties: {
             title: {
               type: "string",
-              description: "Title of the blog",
-              example: "Singing",
+              description: "Title of the article",
+              example: "Article Title",
             },
             picture: {
               type: "string",
-              description: "Image of the blog (url)",
-              example:
-                "http://localhost:5000/images/1674370662518pexels-harry-dona-2338407.jpg",
+              format: "binary",
+              description: "Picture",
             },
             description: {
               type: "string",
-              description: "Description of the blog",
-              example: "Singing is the best practice",
+              description: "Description of the article",
+              example: "description",
             },
           },
         },

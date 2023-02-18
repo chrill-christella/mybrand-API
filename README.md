@@ -1,6 +1,8 @@
 # Badges
 
-[![Coverage Status](https://coveralls.io/repos/github/chrill-christella/mybrand-API/badge.svg?branch=develop)](https://coveralls.io/github/chrill-christella/mybrand-API?branch=develop)
+[![CI/CD](https://github.com/chrill-christella/mybrand-API/actions/workflows/main.yml/badge.svg)](https://github.com/chrill-christella/mybrand-API/actions/workflows/main.yml)
+
+![check-code-coverage](https://img.shields.io/badge/code--coverage-75.64%25-green)
 
 # My Brand Api
 

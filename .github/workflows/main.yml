@@ -12,11 +12,11 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node-version: [18.x]
+        node-version: [16.x]
     env:
       MONGODB_URL: ${{secrets.DATABASEURL_TEST}}
       JWT_SECRET: ${{secrets.JWT_SECRETE}}
-       CLOUDINARY_URL: ${{secrets.CLOUDINARY_URL}}
+      CLOUDINARY_URL: ${{secrets.CLOUDINARY_URL}}
 
     steps:
       - uses: actions/checkout@v1
@@ -25,5 +25,4 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm test
-      
+      - run: npm run test
